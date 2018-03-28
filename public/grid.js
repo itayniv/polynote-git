@@ -34,7 +34,7 @@ var thisnotation40 = false;
 var thisnotation44 = false;
 var thisnotation48 = false;
 var LydianScalesA = [1,3,5,7,8,10,12,13,15,17,19,20,22];
-var feedBackComment = ['Sounds Nice!', 'Love That Sound!', 'Amazing Groove!', 'Music To My Ears!', 'Awesome Tune!', 'Turn It Up!'];
+var feedBackComment = ['Sounds Nice!', 'Thats My Shit!', 'Amazing Groove!', 'Music To My Ears!', 'Awesome Tune!', 'In The Pocket!'];
 
 var currfeedback = 0;
 
@@ -979,6 +979,8 @@ socket.on('currplayer', function(incomingTick){
   /////draw the cursor/////////
   /////////////////////////////
 
+//console.log(currbar);
+
   for(var i=0; i < width;i++){
     pattern01[i] = 0;
     document.getElementById("cell_"+(i+1)).classList.remove('player');
@@ -995,6 +997,7 @@ socket.on('currplayer', function(incomingTick){
     document.getElementById("cell_"+(i+177)).classList.remove('player');
     document.getElementById("cell_"+(i+193)).classList.remove('player');
   }
+
   pattern01[currbar] = 1;
   document.getElementById("cell_"+(currbar+1)).classList.add('player');
   document.getElementById("cell_"+(currbar+17)).classList.add('player');

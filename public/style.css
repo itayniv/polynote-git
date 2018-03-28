@@ -1,0 +1,238 @@
+.container{
+padding-top: 30px;
+width: 100% !important;
+
+}
+
+
+.container-fluid{
+text-align: center;
+font-family: 'Roboto Mono', monospace;
+font-size: 20px;
+width: 100% !important;
+}
+
+.icon-font{
+  padding-top: 20px;
+  text-align: center;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 40px;
+  color: #303030;
+  position: relative;
+  top: -30px;
+}
+
+.sub-text{
+  padding-top: 0px;
+  text-align: center;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 12px;
+  color: #333333;
+  font-weight: 300;
+  position: relative;
+  top: -30px;
+
+}
+
+.sub-text-players{
+  text-align: left;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 12px;
+  font-weight: 300;
+  color: #999999;
+  position: relative;
+  top: -30px;
+}
+
+.reset-timer{
+  text-align: left;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 12px;
+  font-weight: 300;
+  color: #999999;
+}
+
+
+.about{
+  text-align: right;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 12px;
+  font-weight: 300;
+  color: #999999;
+  position: relative;
+  top: -27px;
+}
+
+.sub-text-instructions{
+  text-align: center;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 40px;
+  font-weight: 800;
+  color: #303030;
+  font-weight: 300;
+  position: relative;
+  top: -30px;
+}
+
+
+.about-text{
+  text-align: center;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 40px;
+  font-weight: 800;
+  color: #303030;
+  font-weight: 300;
+  position: relative;
+  top: 100px;
+}
+
+
+
+.grid { margin:0em auto;
+   border-collapse:collapse;
+   position: relative;
+      top: -40px;}
+
+.grid td {
+    cursor:pointer;
+    width:40px; height:40px;
+    border:1px solid #ccc;
+    text-align:center;
+    font-family:sans-serif; font-size:10px; color:#ffffff00;
+
+
+}
+.grid td.clickedRed {
+    background-color:#E92626;
+    font-weight:bold; color:#ffffff00;
+}
+
+.grid td.clickedYellow {
+    background-color:#F7F748;
+    font-weight:bold; color:#ffffff00;
+}
+.grid td.clickedPurpule {
+    background-color:#9D48F7;
+    font-weight:bold; color:#ffffff00;
+}
+.grid td.clickedGold {
+    background-color:#E59D55;
+    font-weight:bold; color:#ffffff00;
+}
+.grid td.clickedGreen {
+    background-color:#5ABA5E;
+    font-weight:bold; color:#ffffff00;
+}
+
+.grid td.clickedSalmon {
+    background-color:#FFA07A;
+    font-weight:bold; color:#ffffff00;
+}
+
+.grid td.clickedBlue {
+    background-color:#3A4DF5;
+    font-weight:bold; color:#ffffff00;
+}
+
+.grid td.clickedAqua {
+    background-color:#00FFFF;
+    font-weight:bold; color:#ffffff00;
+}
+
+.grid td.clickedDarkGreen {
+    background-color:#4F7754;
+    font-weight:bold; color:#ffffff00;
+}
+
+.grid td.clickedLightPink {
+    background-color:#FF99FA;
+    font-weight:bold; color:#ffffff00;
+}
+
+.grid td.clickedDarkBlue {
+    background-color:#1515B5;
+    font-weight:bold; color:#ffffff00;
+}
+
+
+
+
+
+.grid td.player {
+    background-color:#ececec;
+    font-weight:bold; color:#ffffff00;
+
+}
+
+.grid td.notplayer {
+    background-color:#ffffff;
+    font-weight:bold; color:black;
+    color: #ffffff;
+}
+
+.grid td.hovered {
+    background-color:lightgrey;
+    font-weight:bold; color:white;
+}
+
+
+.grid.notclicked td {
+  background-color:#ffffff00;
+  font-weight:bold; color:white;
+}
+
+
+
+.logo {
+    text-align: center;
+    width: 15px;
+}
+
+
+.body {
+  padding: 20px;
+}
+
+.button {
+  margin-top: 20px;
+  line-height: 60px;
+  font-weight: bold;
+  padding: 0 40px;
+  background: salmon;
+  border: none;
+}
+
+.lightbox {
+	/** Default lightbox to hidden */
+	display: none;
+
+	/** Position and style */
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	top: 0;
+	left: 0;
+	background: rgba(255,255,255,0.9);
+}
+
+.lightbox img {
+	/** Pad the lightbox image */
+	max-width: 90%;
+	max-height: 80%;
+	margin-top: 2%;
+}
+
+.lightbox:target {
+	/** Remove default browser outline */
+	outline: none;
+
+	/** Unhide lightbox **/
+	display: block;
+}
+
+
+.button:hover {
+  background: lightsalmon;
+}

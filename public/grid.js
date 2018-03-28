@@ -1338,7 +1338,7 @@ socket.on('globalTimetype', function(incomingBar){
 
   if (clientCounter <= 54){
     if (soundsToPlay > 0){
-      document.getElementById("p3").innerHTML =  addRemove + soundsToPlay + ' sounds';
+      document.getElementById("p3").innerHTML =  addRemove + soundsToPlay + '  sounds';
     } else {
       document.getElementById("p3").innerHTML =  feedBackComment[currfeedback];
     }
@@ -1350,7 +1350,7 @@ socket.on('globalTimetype', function(incomingBar){
 
 
 
-  document.getElementById("p4").innerHTML = currmin + ' minutes and '+ currsec +  ' seconds until song resets';
+  document.getElementById("p4").innerHTML = currmin +':'+ currsec +  ' seconds until song resets';
 
 
   function getRandomInt(max, min) {
@@ -3675,5 +3675,5 @@ function note13_10() {
     }
   }).toMaster()
 
-  synth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[0])/4), '9n');
+  synth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[0])/3), '9n');
 };

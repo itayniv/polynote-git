@@ -49,14 +49,14 @@ init();
 function resetGrid(){
   for (var i = 0; i < width*height; i++){
     seqarraystate[i].activated = 0;
-}
-currtimesec = 30;
-currtimemin = 0;
-globalbarType = 0;
-//sockets.emit('sendSteps', seqarraystate);
-sockets.emit('resetAll', seqarraystate);
+  }
+  currtimesec = 30;
+  currtimemin = 0;
+  globalbarType = 0;
+  //sockets.emit('sendSteps', seqarraystate);
+  sockets.emit('resetAll', seqarraystate);
 
-console.log('reset all');
+  console.log('reset all');
 
 }
 
@@ -109,9 +109,9 @@ sockets.on('connection', function(socket){
 
   //console.log('a user connected',socket.id);
   socket.on('ClientReset', function(resetfromclient){
-  resetGrid();
+    resetGrid();
 
-  //console.log('userreset');
+    //console.log('userreset');
   });
 
   socket.on('disconnect', function(){
@@ -145,32 +145,49 @@ metronome.on('tick', function(){
   }
 
 
-  if (currplayer%8 == 1){
-    currtimesec ++
-  }
 
 
+
+
+
+  sockets.emit('currplayer', currplayer);
+});
+metronome.start();
+
+////////////////tempo///////////
+
+
+
+
+
+////////////////time///////////
+// By default, a metronome object is set to 60 bpm.
+var time = new Metronome();
+// But you could also initialize one at another tempo.
+// It emits a 'tick' event on each beat
+time.set(60);
+
+time.on('tick', function(){
+  currtimesec ++
 
   if (currtimesec >= 60){
     currtimemin ++;
     currtimesec = 0;
   }
 
-
   currtimesecrev = 60 - currtimesec;
   currtimeminrev = 2 - currtimemin;
 
-
   if((currtimesecrev == 1) && (currtimeminrev == 0)){
     resetGrid();
-
   }
 
-
-
-  sockets.emit('currplayer', currplayer);
   sockets.emit('currTime',currtimesecrev, currtimeminrev);
-});
-metronome.start();
 
-////////////////tempo///////////
+
+  // console.log('currTime',currtimesecrev, currtimeminrev);
+
+});
+time.start();
+
+////////////////time///////////

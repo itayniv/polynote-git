@@ -93,21 +93,18 @@ function buildArrayForGridState(liststate, synth, i){
     if (synth == 'aqua'){
       liststate[i-1].instrument = 'synth08';
     }
-    if (synth == 'aqua'){
+    if (synth == 'darkgreen'){
       liststate[i-1].instrument = 'synth09';
     }
-    if (synth == 'darkgreen'){
+    if (synth == 'lightpink'){
       liststate[i-1].instrument = 'synth10';
     }
-    if (synth == 'lightpink'){
-      liststate[i-1].instrument = 'synth11';
-    }
     if (synth == 'darkblue'){
-      liststate[i-1].instrument = 'synth12';
+      liststate[i-1].instrument = 'synth11';
     }
     liststate[i-1].color = synth;
     // console.log('write to liststate:', liststate[i-1].activated, liststate[i-1].instrument, liststate[i-1].color);
-    console.log('Liststate on Click',liststate[i-1]);
+    // console.log('Liststate on Click',liststate[i-1]);
   }else {
     liststate[i-1].activated = 0;
     //console.log('write to liststate:', liststate[i-1].activated, liststate[i-1].instrument, liststate[i-1].color);
@@ -140,74 +137,74 @@ $.ajax({
 
     if (userNo == 0){
       synth = 'white';
-      console.log('you are ', synth);
+      //console.log('you are ', synth);
       document.getElementById("p0").innerHTML = '<span style="color: #ff0000">▣</span>';
     }
 
     if (userNo == 1){
       synth = 'red';
-      console.log('you are ', synth);
+      // console.log('you are ', synth);
       document.getElementById("p0").innerHTML = '<span style="color: red">▣</span>';
     }
 
     if (userNo == 2){
       synth = 'yellow';
-      console.log('you are ', synth);
+      // console.log('you are ', synth);
       document.getElementById("p0").innerHTML = '<span style="color: #F7F748">▣</span>';
 
     }
 
     if (userNo == 3){
       synth = 'purple';
-      console.log('you are ', synth);
+      // console.log('you are ', synth);
       document.getElementById("p0").innerHTML = '<span style="color: #9D48F7">▣</span>';
     }
 
     if (userNo == 4){
       synth = 'gold';
-      console.log('you are ', synth);
+      // console.log('you are ', synth);
       document.getElementById("p0").innerHTML = '<span style="color: #E59D55">▣</span>';
     }
 
     if (userNo == 5){
       synth = 'green';
-      console.log('you are ', synth);
+      // console.log('you are ', synth);
       document.getElementById("p0").innerHTML = '<span style="color: #5ABA5E">▣</span>';
     }
 
     if (userNo == 6){
       synth = 'salmon';
-      console.log('you are ', synth);
+      // console.log('you are ', synth);
       document.getElementById("p0").innerHTML = '<span style="color: #FFA07A">▣</span>';
     }
 
     if (userNo == 7){
       synth = 'blue';
-      console.log('syou are ', synth);
+      // console.log('syou are ', synth);
       document.getElementById("p0").innerHTML = '<span style="color: #3A4DF5">▣</span>';
     }
 
     if (userNo == 8){
       synth = 'aqua';
-      console.log('you are ', synth);
+      // console.log('you are ', synth);
       document.getElementById("p0").innerHTML = '<span style="color: #00FFFF">▣</span>';
     }
 
     if (userNo == 9){
       synth = 'darkgreen';
-      console.log('you are ', synth);
+      // console.log('you are ', synth);
       document.getElementById("p0").innerHTML = '<span style="color: #4F7754">▣</span>';
     }
 
     if (userNo == 10){
       synth = 'lightpink';
-      console.log('you are ', synth);
+      // console.log('you are ', synth);
       document.getElementById("p0").innerHTML = '<span style="color: #FF99FA">▣</span>';
     }
 
     if (userNo == 11){
       synth = 'darkblue';
-      console.log('you are ', synth);
+      // console.log('you are ', synth);
       document.getElementById("p0").innerHTML = '<span style="color: #1515B5">▣</span>';
     }
 
@@ -274,7 +271,7 @@ function clickableGrid( rows, cols, callback ){
 socket.on('sendSteps', function(steps){
   seqarr = steps;
   arrayrecieved = true;
-  console.log('got_newArr', arrayrecieved, seqarr[1])
+  // console.log('got_newArr', arrayrecieved, seqarr[1])
 });
 
 
@@ -700,55 +697,56 @@ socket.on('currplayer', function(incomingTick){
       if(liststate[i].instrument == 'synth08'){
 
         if ((liststate[i].activated==1) && (pattern01[i-(16*0)] == 1)){
-          note1_1();
+          note1_8();
+          console.log('hit');
         }
 
         if ((liststate[i].activated==1) && (pattern01[i-(16*1)] == 1)){
-          note2_1();
+          note2_8();
         }
 
         if ((liststate[i].activated==1) && (pattern01[i-(16*2)] == 1)){
-          note3_1();
+          note3_8();
         }
 
         if ((liststate[i].activated==1) && (pattern01[i-(16*3)] == 1)){
-          note4_1();
+          note4_8();
         }
 
         if ((liststate[i].activated==1) && (pattern01[i-(16*4)] == 1)){
-          note5_1();
+          note5_8();
         }
 
         if ((liststate[i].activated==1) && (pattern01[i-(16*5)] == 1)){
-          note6_1();
+          note6_8();
         }
 
         if ((liststate[i].activated==1) && (pattern01[i-(16*6)] == 1)){
-          note7_1();
+          note7_8();
         }
 
         if ((liststate[i].activated==1) && (pattern01[i-(16*7)] == 1)){
-          note8_1();
+          note8_8();
         }
 
         if ((liststate[i].activated==1) && (pattern01[i-(16*8)] == 1)){
-          note9_1();
+          note9_8();
         }
 
         if ((liststate[i].activated==1) && (pattern01[i-(16*9)] == 1)){
-          note10_1();
+          note10_8();
         }
 
         if ((liststate[i].activated==1) && (pattern01[i-(16*10)] == 1)){
-          note11_1();
+          note11_8();
         }
 
         if ((liststate[i].activated==1) && (pattern01[i-(16*11)] == 1)){
-          note12_1();
+          note12_8();
         }
 
         if ((liststate[i].activated==1) && (pattern01[i-(16*12)] == 1)){
-          note13_1();
+          note13_8();
         }
       }
 
@@ -758,110 +756,110 @@ socket.on('currplayer', function(incomingTick){
       if(liststate[i].instrument == 'synth09'){
 
         if ((liststate[i].activated==1) && (pattern01[i-(16*0)] == 1)){
-          note1_1();
+          note1_9();
         }
 
         if ((liststate[i].activated==1) && (pattern01[i-(16*1)] == 1)){
-          note2_1();
+          note2_9();
         }
 
         if ((liststate[i].activated==1) && (pattern01[i-(16*2)] == 1)){
-          note3_1();
+          note3_9();
         }
 
         if ((liststate[i].activated==1) && (pattern01[i-(16*3)] == 1)){
-          note4_1();
+          note4_9();
         }
 
         if ((liststate[i].activated==1) && (pattern01[i-(16*4)] == 1)){
-          note5_1();
+          note5_9();
         }
 
         if ((liststate[i].activated==1) && (pattern01[i-(16*5)] == 1)){
-          note6_1();
+          note6_9();
         }
 
         if ((liststate[i].activated==1) && (pattern01[i-(16*6)] == 1)){
-          note7_1();
+          note7_9();
         }
 
         if ((liststate[i].activated==1) && (pattern01[i-(16*7)] == 1)){
-          note8_1();
+          note8_9();
         }
 
         if ((liststate[i].activated==1) && (pattern01[i-(16*8)] == 1)){
-          note9_1();
+          note9_9();
         }
 
         if ((liststate[i].activated==1) && (pattern01[i-(16*9)] == 1)){
-          note10_1();
+          note10_9();
         }
 
         if ((liststate[i].activated==1) && (pattern01[i-(16*10)] == 1)){
-          note11_1();
+          note11_9();
         }
 
         if ((liststate[i].activated==1) && (pattern01[i-(16*11)] == 1)){
-          note12_1();
+          note12_9();
         }
 
         if ((liststate[i].activated==1) && (pattern01[i-(16*12)] == 1)){
-          note13_1();
+          note13_9();
         }
       }
 
       if(liststate[i].instrument == 'synth10'){
 
         if ((liststate[i].activated==1) && (pattern01[i-(16*0)] == 1)){
-          note1_1();
+          note1_10();
         }
 
         if ((liststate[i].activated==1) && (pattern01[i-(16*1)] == 1)){
-          note2_1();
+          note2_10();
         }
 
         if ((liststate[i].activated==1) && (pattern01[i-(16*2)] == 1)){
-          note3_1();
+          note3_10();
         }
 
         if ((liststate[i].activated==1) && (pattern01[i-(16*3)] == 1)){
-          note4_1();
+          note4_10();
         }
 
         if ((liststate[i].activated==1) && (pattern01[i-(16*4)] == 1)){
-          note5_1();
+          note5_10();
         }
 
         if ((liststate[i].activated==1) && (pattern01[i-(16*5)] == 1)){
-          note6_1();
+          note6_10();
         }
 
         if ((liststate[i].activated==1) && (pattern01[i-(16*6)] == 1)){
-          note7_1();
+          note7_10();
         }
 
         if ((liststate[i].activated==1) && (pattern01[i-(16*7)] == 1)){
-          note8_1();
+          note8_10();
         }
 
         if ((liststate[i].activated==1) && (pattern01[i-(16*8)] == 1)){
-          note9_1();
+          note9_10();
         }
 
         if ((liststate[i].activated==1) && (pattern01[i-(16*9)] == 1)){
-          note10_1();
+          note10_10();
         }
 
         if ((liststate[i].activated==1) && (pattern01[i-(16*10)] == 1)){
-          note11_1();
+          note11_10();
         }
 
         if ((liststate[i].activated==1) && (pattern01[i-(16*11)] == 1)){
-          note12_1();
+          note12_10();
         }
 
         if ((liststate[i].activated==1) && (pattern01[i-(16*12)] == 1)){
-          note13_1();
+          note13_10();
         }
       }
 
@@ -1139,7 +1137,7 @@ socket.on('globalTimetype', function(incomingBar){
     if (clientCounter >= 0){
       soundsToPlay = 1;
       addRemove = 'Start with adding ';
-      console.log("random number for bar", clientCounter, 'is' ,soundsToPlay);
+      // console.log("random number for bar", clientCounter, 'is' ,soundsToPlay);
       thisnotationArr[0] = true;
     }
   }
@@ -1149,7 +1147,7 @@ socket.on('globalTimetype', function(incomingBar){
     if (clientCounter == 4){
       soundsToPlay = 2;
       addRemove = 'Add another ' ;
-      console.log("random number for bar", clientCounter, 'is' ,soundsToPlay);
+      // console.log("random number for bar", clientCounter, 'is' ,soundsToPlay);
       thisnotationArr[4] = true;
     }
   }
@@ -1159,7 +1157,7 @@ socket.on('globalTimetype', function(incomingBar){
     if (clientCounter == 8){
       soundsToPlay = 3;
       addRemove = 'Add ' ;
-      console.log("random number for bar", clientCounter, 'is' ,soundsToPlay);
+      // console.log("random number for bar", clientCounter, 'is' ,soundsToPlay);
       thisnotationArr[8] = true;
     }
   }
@@ -1168,7 +1166,7 @@ socket.on('globalTimetype', function(incomingBar){
     if (clientCounter == 12){
       soundsToPlay = 4;
       addRemove = 'Add ' ;
-      console.log("random number for bar", clientCounter, 'is' ,soundsToPlay);
+      // console.log("random number for bar", clientCounter, 'is' ,soundsToPlay);
       thisnotationArr[12] = true;
     }
   }
@@ -1181,7 +1179,7 @@ socket.on('globalTimetype', function(incomingBar){
       }else{
         addRemove = 'Remove ';
       }
-      console.log("random number for bar", clientCounter, 'is' ,soundsToPlay);
+      // console.log("random number for bar", clientCounter, 'is' ,soundsToPlay);
       thisnotationArr[16] = true;
     }
   }
@@ -1191,12 +1189,12 @@ socket.on('globalTimetype', function(incomingBar){
       soundsToPlay = getRandomInt(5,1);
       if ((soundsToPlay%2) == 0){
         addRemove = 'Add ';
-        console.log('add');
+        // console.log('add');
       }else{
         addRemove = 'Remove ';
-        console.log('remove');
+        // console.log('remove');
       }
-      console.log("random number for bar", clientCounter, 'is' ,soundsToPlay);
+      // console.log("random number for bar", clientCounter, 'is' ,soundsToPlay);
       thisnotationArr[20] = true;
     }
   }
@@ -1206,12 +1204,12 @@ socket.on('globalTimetype', function(incomingBar){
       soundsToPlay = getRandomInt(9,1);
       if ((soundsToPlay%2) == 0){
         addRemove = 'Add ';
-        console.log('add');
+        // console.log('add');
       }else{
         addRemove = 'Remove ';
-        console.log('remove');
+        // console.log('remove');
       }
-      console.log("random number for bar", clientCounter, 'is' ,soundsToPlay);
+      // console.log("random number for bar", clientCounter, 'is' ,soundsToPlay);
       thisnotationArr[24] = true;
     }
   }
@@ -1221,12 +1219,12 @@ socket.on('globalTimetype', function(incomingBar){
       soundsToPlay = getRandomInt(5,1);
       if ((soundsToPlay%2) == 0){
         addRemove = 'Add ';
-        console.log('add');
+        // console.log('add');
       }else{
         addRemove = 'Remove ';
-        console.log('remove');
+        // console.log('remove');
       }
-      console.log("random number for bar", clientCounter, 'is' ,soundsToPlay);
+      // console.log("random number for bar", clientCounter, 'is' ,soundsToPlay);
       thisnotationArr[30] = true;
     }
   }
@@ -1237,12 +1235,12 @@ socket.on('globalTimetype', function(incomingBar){
       soundsToPlay = getRandomInt(4,1);
       if ((soundsToPlay%2) == 0){
         addRemove = 'Add ';
-        console.log('add');
+        // console.log('add');
       }else{
         addRemove = 'Remove ';
-        console.log('remove');
+        // console.log('remove');
       }
-      console.log("random number for bar", clientCounter, 'is' ,soundsToPlay);
+      // console.log("random number for bar", clientCounter, 'is' ,soundsToPlay);
       thisnotationArr[34] = true;
     }
   }
@@ -1253,12 +1251,12 @@ socket.on('globalTimetype', function(incomingBar){
       soundsToPlay = getRandomInt(4,1);
       if ((soundsToPlay%2) == 0){
         addRemove = 'Add ';
-        console.log('add');
+        // console.log('add');
       }else{
         addRemove = 'Remove ';
-        console.log('remove');
+        // console.log('remove');
       }
-      console.log("random number for bar", clientCounter, 'is' ,soundsToPlay);
+      // console.log("random number for bar", clientCounter, 'is' ,soundsToPlay);
       thisnotationArr[38] = true;
     }
   }
@@ -1270,12 +1268,12 @@ socket.on('globalTimetype', function(incomingBar){
       soundsToPlay = getRandomInt(7,1);
       if ((soundsToPlay%2) == 0){
         addRemove = 'Add ';
-        console.log('add');
+        // console.log('add');
       }else{
         addRemove = 'Remove ';
-        console.log('remove');
+        // console.log('remove');
       }
-      console.log("random number for bar", clientCounter, 'is' ,soundsToPlay);
+      // console.log("random number for bar", clientCounter, 'is' ,soundsToPlay);
       thisnotationArr[42] = true;
     }
   }
@@ -1286,12 +1284,12 @@ socket.on('globalTimetype', function(incomingBar){
       soundsToPlay = getRandomInt(7,1);
       if ((soundsToPlay%2) == 0){
         addRemove = 'Add ';
-        console.log('add');
+        // console.log('add');
       }else{
         addRemove = 'Remove ';
-        console.log('remove');
+        // console.log('remove');
       }
-      console.log("random number for bar", clientCounter, 'is' ,soundsToPlay);
+      // console.log("random number for bar", clientCounter, 'is' ,soundsToPlay);
       thisnotationArr[46] = true;
     }
   }
@@ -1301,12 +1299,12 @@ socket.on('globalTimetype', function(incomingBar){
       soundsToPlay = getRandomInt(7,1);
       if ((soundsToPlay%2) == 0){
         addRemove = 'Add ';
-        console.log('add');
+        // console.log('add');
       }else{
         addRemove = 'Remove ';
-        console.log('remove');
+        // console.log('remove');
       }
-      console.log("random number for bar", clientCounter, 'is' ,soundsToPlay);
+      // console.log("random number for bar", clientCounter, 'is' ,soundsToPlay);
       thisnotationArr[48] = true;
     }
   }
@@ -1316,12 +1314,12 @@ socket.on('globalTimetype', function(incomingBar){
       soundsToPlay = getRandomInt(7,1);
       if ((soundsToPlay%2) == 0){
         addRemove = 'Add ';
-        console.log('add');
+        // console.log('add');
       }else{
         addRemove = 'Remove ';
-        console.log('remove');
+        // console.log('remove');
       }
-      console.log("random number for bar", clientCounter, 'is' ,soundsToPlay);
+      // console.log("random number for bar", clientCounter, 'is' ,soundsToPlay);
       thisnotationArr[52] = true;
     }
   }
@@ -1332,7 +1330,7 @@ socket.on('globalTimetype', function(incomingBar){
     if (clientCounter == 55){
       soundsToPlay = getRandomInt(7,1);
       addRemove = 'remove all ';
-      console.log("random number for bar", clientCounter, 'is' ,soundsToPlay);
+      // console.log("random number for bar", clientCounter, 'is' ,soundsToPlay);
       thisnotationArr[55] = true;
     }
   }
@@ -1403,7 +1401,7 @@ function note1_1() {
       type : "fatsquare100"
     },
     envelope : {
-      attack : 0.001,
+      attack : 0.01,
       decay : 0.5,
       sustain : 0.1,
       release : 0.8
@@ -1419,7 +1417,7 @@ function note2_1() {
       type : "fatsquare100"
     },
     envelope : {
-      attack : 0.001,
+      attack : 0.01,
       decay : 0.5,
       sustain : 0.1,
       release : 0.8
@@ -1434,7 +1432,7 @@ function note3_1() {
       type : "fatsquare100"
     },
     envelope : {
-      attack : 0.001,
+      attack : 0.01,
       decay : 0.5,
       sustain : 0.1,
       release : 0.8
@@ -1449,7 +1447,7 @@ function note4_1() {
       type : "fatsquare100"
     },
     envelope : {
-      attack : 0.001,
+      attack : 0.01,
       decay : 0.5,
       sustain : 0.1,
       release : 0.8
@@ -1464,7 +1462,7 @@ function note5_1() {
       type : "fatsquare100"
     },
     envelope : {
-      attack : 0.001,
+      attack : 0.01,
       decay : 0.5,
       sustain : 0.1,
       release : 0.8
@@ -1479,7 +1477,7 @@ function note6_1() {
       type : "fatsquare100"
     },
     envelope : {
-      attack : 0.001,
+      attack : 0.01,
       decay : 0.5,
       sustain : 0.1,
       release : 0.8
@@ -1494,7 +1492,7 @@ function note7_1() {
       type : "fatsquare100"
     },
     envelope : {
-      attack : 0.001,
+      attack : 0.01,
       decay : 0.5,
       sustain : 0.1,
       release : 0.8
@@ -1509,7 +1507,7 @@ function note8_1() {
       type : "fatsquare100"
     },
     envelope : {
-      attack : 0.001,
+      attack : 0.01,
       decay : 0.5,
       sustain : 0.1,
       release : 0.8
@@ -1524,7 +1522,7 @@ function note9_1() {
       type : "fatsquare100"
     },
     envelope : {
-      attack : 0.001,
+      attack : 0.01,
       decay : 0.5,
       sustain : 0.1,
       release : 0.8
@@ -1539,7 +1537,7 @@ function note10_1() {
       type : "fatsquare100"
     },
     envelope : {
-      attack : 0.001,
+      attack : 0.01,
       decay : 0.5,
       sustain : 0.1,
       release : 0.8
@@ -1554,7 +1552,7 @@ function note11_1() {
       type : "fatsquare100"
     },
     envelope : {
-      attack : 0.001,
+      attack : 0.01,
       decay : 0.5,
       sustain : 0.1,
       release : 0.8
@@ -1570,7 +1568,7 @@ function note12_1() {
       type : "fatsquare100"
     },
     envelope : {
-      attack : 0.001,
+      attack : 0.01,
       decay : 0.5,
       sustain : 0.1,
       release : 0.8
@@ -1586,7 +1584,7 @@ function note13_1() {
       type : "fatsquare100"
     },
     envelope : {
-      attack : 0.001,
+      attack : 0.01,
       decay : 0.5,
       sustain : 0.1,
       release : 0.8
@@ -2185,6 +2183,7 @@ function note9_4() {
 
   duoSynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[8])/4), '7n');
 };
+
 function note10_4() {
   var duoSynth = new Tone.DuoSynth({
     oscillator : {
@@ -2200,6 +2199,7 @@ function note10_4() {
 
   duoSynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[9])/4), '7n');
 };
+
 function note11_4() {
   var duoSynth = new Tone.DuoSynth({
     oscillator : {
@@ -2253,253 +2253,294 @@ function note13_4() {
 
 
 
+// function note1_5() {
+//   var phaser = new Tone.Phaser({
+//     "frequency" : 15,
+//     "octaves" : 2,
+//     "baseFrequency" : 200
+//   }).toMaster();
+//   var roundsynth = new Tone.Synth({
+//     oscillator : {
+//       type : "fatsquare1"
+//     },
+//     envelope : {
+//       attack : .09,
+//       decay : .4,
+//       sustain : 0.001,
+//       release : .2
+//     }
+//   })connect(phaser).toMaster()
+//   roundsynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[0]*2), '3n');
+// };
+
+
+
+
 function note1_5() {
   var phaser = new Tone.Phaser({
-    "frequency" : 15,
+    "frequency" : 2,
     "octaves" : 2,
     "baseFrequency" : 200
   }).toMaster();
-  var fmSynth = new Tone.FMSynth({
+  var roundsynth = new Tone.Synth({
     oscillator : {
-      type : "fatsquare3"
+      type : "fatsquare1"
     },
     envelope : {
-      attack : 0.1,
-      decay : .01,
-      sustain : 1.1,
-      release : 0.5
+      attack : .09,
+      decay : .4,
+      sustain : 0.001,
+      release : .2
     }
   }).connect(phaser).toMaster()
-  fmSynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[0])*2), '6n');
-};
+
+  roundsynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[0])), '3n');
+  };
+
+
 function note2_5() {
   var phaser = new Tone.Phaser({
-    "frequency" : 15,
+    "frequency" : 2,
     "octaves" : 2,
     "baseFrequency" : 200
   }).toMaster();
-  var fmSynth = new Tone.FMSynth({
+  var roundsynth = new Tone.Synth({
     oscillator : {
-      type : "fatsquare3"
+      type : "fatsquare1"
     },
     envelope : {
-      attack : 0.1,
-      decay : .01,
-      sustain : 1.1,
-      release : 0.5
+      attack : .09,
+      decay : .4,
+      sustain : 0.001,
+      release : .2
     }
   }).connect(phaser).toMaster()
-  fmSynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[1])*2), '6n');
-};
+
+  roundsynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[1])), '3n');
+  };
 function note3_5() {
   var phaser = new Tone.Phaser({
-    "frequency" : 15,
+    "frequency" : 2,
     "octaves" : 2,
     "baseFrequency" : 200
   }).toMaster();
-  var fmSynth = new Tone.FMSynth({
+  var roundsynth = new Tone.Synth({
     oscillator : {
-      type : "fatsquare3"
+      type : "fatsquare1"
     },
     envelope : {
-      attack : 0.1,
-      decay : .01,
-      sustain : 1.1,
-      release : 0.5
+      attack : .09,
+      decay : .4,
+      sustain : 0.001,
+      release : .2
     }
   }).connect(phaser).toMaster()
-  fmSynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[2])*2), '6n');
-};
+
+  roundsynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[2])), '3n');
+  };
+
 function note4_5() {
   var phaser = new Tone.Phaser({
-    "frequency" : 15,
+    "frequency" : 2,
     "octaves" : 2,
     "baseFrequency" : 200
   }).toMaster();
-  var fmSynth = new Tone.FMSynth({
+  var roundsynth = new Tone.Synth({
     oscillator : {
-      type : "fatsquare3"
+      type : "fatsquare1"
     },
     envelope : {
-      attack : 0.1,
-      decay : .01,
-      sustain : 1.1,
-      release : 0.5
+      attack : .09,
+      decay : .4,
+      sustain : 0.001,
+      release : .2
     }
   }).connect(phaser).toMaster()
-  fmSynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[3])*2), '6n');
-};
+
+  roundsynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[3])), '3n');
+  };
+
 function note5_5() {
   var phaser = new Tone.Phaser({
-    "frequency" : 15,
+    "frequency" : 2,
     "octaves" : 2,
     "baseFrequency" : 200
   }).toMaster();
-  var fmSynth = new Tone.FMSynth({
+  var roundsynth = new Tone.Synth({
     oscillator : {
-      type : "fatsquare3"
+      type : "fatsquare1"
     },
     envelope : {
-      attack : 0.1,
-      decay : .01,
-      sustain : 1.1,
-      release : 0.5
+      attack : .09,
+      decay : .4,
+      sustain : 0.001,
+      release : .2
     }
   }).connect(phaser).toMaster()
-  fmSynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[4])*2), '6n');
-};
+
+  roundsynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[4])), '3n');
+  };
 function note6_5() {
   var phaser = new Tone.Phaser({
-    "frequency" : 15,
+    "frequency" : 2,
     "octaves" : 2,
     "baseFrequency" : 200
   }).toMaster();
-  var fmSynth = new Tone.FMSynth({
+  var roundsynth = new Tone.Synth({
     oscillator : {
-      type : "fatsquare3"
+      type : "fatsquare1"
     },
     envelope : {
-      attack : 0.1,
-      decay : .01,
-      sustain : 1.1,
-      release : 0.5
+      attack : .09,
+      decay : .4,
+      sustain : 0.001,
+      release : .2
     }
   }).connect(phaser).toMaster()
-  fmSynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[5])*2), '6n');
-};
+
+  roundsynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[5])), '3n');
+  };
 function note7_5() {
   var phaser = new Tone.Phaser({
-    "frequency" : 15,
+    "frequency" : 2,
     "octaves" : 2,
     "baseFrequency" : 200
   }).toMaster();
-  var fmSynth = new Tone.FMSynth({
+  var roundsynth = new Tone.Synth({
     oscillator : {
-      type : "fatsquare3"
+      type : "fatsquare1"
     },
     envelope : {
-      attack : 0.1,
-      decay : .01,
-      sustain : 1.1,
-      release : 0.5
+      attack : .09,
+      decay : .4,
+      sustain : 0.001,
+      release : .2
     }
   }).connect(phaser).toMaster()
-  fmSynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[6])*2), '6n');
-};
+
+  roundsynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[6])), '3n');
+  };
 function note8_5() {
   var phaser = new Tone.Phaser({
-    "frequency" : 15,
+    "frequency" : 2,
     "octaves" : 2,
     "baseFrequency" : 200
   }).toMaster();
-  var fmSynth = new Tone.FMSynth({
+  var roundsynth = new Tone.Synth({
     oscillator : {
-      type : "fatsquare3"
+      type : "fatsquare1"
     },
     envelope : {
-      attack : 0.1,
-      decay : .01,
-      sustain : 1.1,
-      release : 0.5
+      attack : .09,
+      decay : .4,
+      sustain : 0.001,
+      release : .2
     }
   }).connect(phaser).toMaster()
-  fmSynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[7])*2), '6n');
-};
+
+  roundsynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[7])), '3n');
+  };
 function note9_5() {
   var phaser = new Tone.Phaser({
-    "frequency" : 15,
+    "frequency" : 2,
     "octaves" : 2,
     "baseFrequency" : 200
   }).toMaster();
-  var fmSynth = new Tone.FMSynth({
+  var roundsynth = new Tone.Synth({
     oscillator : {
-      type : "fatsquare3"
+      type : "fatsquare1"
     },
     envelope : {
-      attack : 0.1,
-      decay : .01,
-      sustain : 1.1,
-      release : 0.5
+      attack : .09,
+      decay : .4,
+      sustain : 0.001,
+      release : .2
     }
   }).connect(phaser).toMaster()
-  fmSynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[8])*2), '6n');
-};
+
+  roundsynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[8])), '3n');
+  };
 function note10_5() {
   var phaser = new Tone.Phaser({
-    "frequency" : 15,
+    "frequency" : 2,
     "octaves" : 2,
     "baseFrequency" : 200
   }).toMaster();
-  var fmSynth = new Tone.FMSynth({
+  var roundsynth = new Tone.Synth({
     oscillator : {
-      type : "fatsquare3"
+      type : "fatsquare1"
     },
     envelope : {
-      attack : 0.1,
-      decay : .01,
-      sustain : 1.1,
-      release : 0.5
+      attack : .09,
+      decay : .4,
+      sustain : 0.001,
+      release : .2
     }
   }).connect(phaser).toMaster()
-  fmSynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[9])*2), '6n');
-};
+
+  roundsynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[9])), '3n');
+  };
 function note11_5() {
   var phaser = new Tone.Phaser({
-    "frequency" : 15,
+    "frequency" : 2,
     "octaves" : 2,
     "baseFrequency" : 200
   }).toMaster();
-  var fmSynth = new Tone.FMSynth({
+  var roundsynth = new Tone.Synth({
     oscillator : {
-      type : "fatsquare3"
+      type : "fatsquare1"
     },
     envelope : {
-      attack : 0.1,
-      decay : .01,
-      sustain : 1.1,
-      release : 0.5
+      attack : .09,
+      decay : .4,
+      sustain : 0.001,
+      release : .2
     }
   }).connect(phaser).toMaster()
-  fmSynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[10])*2), '6n');
-};
+
+  roundsynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[10])), '3n');
+  };
 function note12_5() {
   var phaser = new Tone.Phaser({
-    "frequency" : 15,
+    "frequency" : 2,
     "octaves" : 2,
     "baseFrequency" : 200
   }).toMaster();
-  var fmSynth = new Tone.FMSynth({
+  var roundsynth = new Tone.Synth({
     oscillator : {
-      type : "fatsquare3"
+      type : "fatsquare1"
     },
     envelope : {
-      attack : 0.1,
-      decay : .01,
-      sustain : 1.1,
-      release : 0.5
+      attack : .09,
+      decay : .4,
+      sustain : 0.001,
+      release : .2
     }
   }).connect(phaser).toMaster()
-  fmSynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[11])*2), '6n');
-};
+
+  roundsynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[11])), '3n');
+  };
 function note13_5() {
   var phaser = new Tone.Phaser({
-    "frequency" : 15,
+    "frequency" : 2,
     "octaves" : 2,
     "baseFrequency" : 200
   }).toMaster();
-  var fmSynth = new Tone.FMSynth({
+  var roundsynth = new Tone.Synth({
     oscillator : {
-      type : "fatsquare3"
+      type : "fatsquare1"
     },
     envelope : {
-      attack : 0.1,
-      decay : .01,
-      sustain : 1.1,
-      release : 0.5
+      attack : .09,
+      decay : .4,
+      sustain : 0.001,
+      release : .2
     }
   }).connect(phaser).toMaster()
-  fmSynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[12])*2), '6n');
-};
+
+  roundsynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[12])), '3n');
+  };
+
 
 
 //////////////////////////////////
@@ -2740,273 +2781,899 @@ function note13_6() {
 function note1_7() {
   var pingPong = new Tone.PingPongDelay("12n", 0.2).toMaster();
   var phaser = new Tone.Phaser({
-    "frequency" : 10,
-    "octaves" : 5,
-    "baseFrequency" : 3000
+    "frequency" : 2,
+    "octaves" : 1,
+    "baseFrequency" : 300
   }).toMaster();
   var fmSynth = new Tone.FMSynth({
     oscillator : {
-      type : "fatsquare3"
+      type : "fatsquare1"
     },
     envelope : {
-      attack : 0.001,
+      attack : 0.1,
       decay : .01,
       sustain : 1.1,
       release : 0.5
     }
   }).connect(phaser).connect(pingPong).toMaster()
-  fmSynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[0])*4), '12n');
+  fmSynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[0])), '12n');
 };
 
 function note2_7() {
   var pingPong = new Tone.PingPongDelay("12n", 0.2).toMaster();
   var phaser = new Tone.Phaser({
-    "frequency" : 10,
-    "octaves" : 5,
-    "baseFrequency" : 3000
+    "frequency" : 2,
+    "octaves" : 1,
+    "baseFrequency" : 300
   }).toMaster();
   var fmSynth = new Tone.FMSynth({
     oscillator : {
-      type : "fatsquare3"
+      type : "fatsquare1"
     },
     envelope : {
-      attack : 0.001,
+      attack : 0.1,
       decay : .01,
       sustain : 1.1,
       release : 0.5
     }
   }).connect(phaser).connect(pingPong).toMaster()
-  fmSynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[1])*4), '12n');
+  fmSynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[1])), '12n');
 };
 function note3_7() {
   var pingPong = new Tone.PingPongDelay("12n", 0.2).toMaster();
   var phaser = new Tone.Phaser({
-    "frequency" : 10,
-    "octaves" : 5,
-    "baseFrequency" : 3000
+    "frequency" : 2,
+    "octaves" : 1,
+    "baseFrequency" : 300
   }).toMaster();
   var fmSynth = new Tone.FMSynth({
     oscillator : {
-      type : "fatsquare3"
+      type : "fatsquare1"
     },
     envelope : {
-      attack : 0.001,
+      attack : 0.1,
       decay : .01,
       sustain : 1.1,
       release : 0.5
     }
   }).connect(phaser).connect(pingPong).toMaster()
-  fmSynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[2])*4), '12n');
+  fmSynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[2])), '12n');
 };
 function note4_7() {
   var pingPong = new Tone.PingPongDelay("12n", 0.2).toMaster();
   var phaser = new Tone.Phaser({
-    "frequency" : 10,
-    "octaves" : 5,
-    "baseFrequency" : 3000
+    "frequency" : 2,
+    "octaves" : 1,
+    "baseFrequency" : 300
   }).toMaster();
   var fmSynth = new Tone.FMSynth({
     oscillator : {
-      type : "fatsquare3"
+      type : "fatsquare1"
     },
     envelope : {
-      attack : 0.001,
+      attack : 0.1,
       decay : .01,
       sustain : 1.1,
       release : 0.5
     }
   }).connect(phaser).connect(pingPong).toMaster()
-  fmSynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[3])*4), '12n');
+  fmSynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[3])), '12n');
 };
 function note5_7() {
   var pingPong = new Tone.PingPongDelay("12n", 0.2).toMaster();
   var phaser = new Tone.Phaser({
-    "frequency" : 10,
-    "octaves" : 5,
-    "baseFrequency" : 3000
+    "frequency" : 2,
+    "octaves" : 1,
+    "baseFrequency" : 300
   }).toMaster();
   var fmSynth = new Tone.FMSynth({
     oscillator : {
-      type : "fatsquare3"
+      type : "fatsquare1"
     },
     envelope : {
-      attack : 0.001,
+      attack : 0.1,
       decay : .01,
       sustain : 1.1,
       release : 0.5
     }
   }).connect(phaser).connect(pingPong).toMaster()
-  fmSynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[4])*4), '12n');
+  fmSynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[4])), '12n');
 };
 
 function note6_7() {
   var pingPong = new Tone.PingPongDelay("12n", 0.2).toMaster();
   var phaser = new Tone.Phaser({
-    "frequency" : 10,
-    "octaves" : 5,
-    "baseFrequency" : 3000
+    "frequency" : 2,
+    "octaves" : 1,
+    "baseFrequency" : 300
   }).toMaster();
   var fmSynth = new Tone.FMSynth({
     oscillator : {
-      type : "fatsquare3"
+      type : "fatsquare1"
     },
     envelope : {
-      attack : 0.001,
+      attack : 0.1,
       decay : .01,
       sustain : 1.1,
       release : 0.5
     }
   }).connect(phaser).connect(pingPong).toMaster()
-  fmSynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[5])*4), '12n');
+  fmSynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[5])), '12n');
 };
 
 function note7_7() {
   var pingPong = new Tone.PingPongDelay("12n", 0.2).toMaster();
   var phaser = new Tone.Phaser({
-    "frequency" : 10,
-    "octaves" : 5,
-    "baseFrequency" : 3000
+    "frequency" : 2,
+    "octaves" : 1,
+    "baseFrequency" : 300
   }).toMaster();
   var fmSynth = new Tone.FMSynth({
     oscillator : {
-      type : "fatsquare3"
+      type : "fatsquare1"
     },
     envelope : {
-      attack : 0.001,
+      attack : 0.1,
       decay : .01,
       sustain : 1.1,
       release : 0.5
     }
   }).connect(phaser).connect(pingPong).toMaster()
-  fmSynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[6])*4), '12n');
+  fmSynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[6])), '12n');
 };
 
 function note8_7() {
   var pingPong = new Tone.PingPongDelay("12n", 0.2).toMaster();
   var phaser = new Tone.Phaser({
-    "frequency" : 10,
-    "octaves" : 5,
-    "baseFrequency" : 3000
+    "frequency" : 2,
+    "octaves" : 1,
+    "baseFrequency" : 300
   }).toMaster();
   var fmSynth = new Tone.FMSynth({
     oscillator : {
-      type : "fatsquare3"
+      type : "fatsquare1"
     },
     envelope : {
-      attack : 0.001,
+      attack : 0.1,
       decay : .01,
       sustain : 1.1,
       release : 0.5
     }
   }).connect(phaser).connect(pingPong).toMaster()
-  fmSynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[7])*4), '12n');
+  fmSynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[7])), '12n');
 };
 
 
 function note9_7() {
   var pingPong = new Tone.PingPongDelay("12n", 0.2).toMaster();
   var phaser = new Tone.Phaser({
-    "frequency" : 10,
-    "octaves" : 5,
-    "baseFrequency" : 3000
+    "frequency" : 2,
+    "octaves" : 1,
+    "baseFrequency" : 300
   }).toMaster();
   var fmSynth = new Tone.FMSynth({
     oscillator : {
-      type : "fatsquare3"
+      type : "fatsquare1"
     },
     envelope : {
-      attack : 0.001,
+      attack : 0.1,
       decay : .01,
       sustain : 1.1,
       release : 0.5
     }
   }).connect(phaser).connect(pingPong).toMaster()
-  fmSynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[8])*4), '12n');
+  fmSynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[8])), '12n');
 };
 
 
 function note10_7() {
   var pingPong = new Tone.PingPongDelay("12n", 0.2).toMaster();
   var phaser = new Tone.Phaser({
-    "frequency" : 10,
-    "octaves" : 5,
-    "baseFrequency" : 3000
+    "frequency" : 2,
+    "octaves" : 1,
+    "baseFrequency" : 300
   }).toMaster();
   var fmSynth = new Tone.FMSynth({
     oscillator : {
-      type : "fatsquare3"
+      type : "fatsquare1"
     },
     envelope : {
-      attack : 0.001,
+      attack : 0.1,
       decay : .01,
       sustain : 1.1,
       release : 0.5
     }
   }).connect(phaser).connect(pingPong).toMaster()
-  fmSynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[9])*4), '12n');
+  fmSynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[9])), '12n');
 };
 
 
 function note11_7() {
   var pingPong = new Tone.PingPongDelay("12n", 0.2).toMaster();
   var phaser = new Tone.Phaser({
-    "frequency" : 10,
-    "octaves" : 5,
-    "baseFrequency" : 3000
+    "frequency" : 2,
+    "octaves" : 1,
+    "baseFrequency" : 300
   }).toMaster();
   var fmSynth = new Tone.FMSynth({
     oscillator : {
-      type : "fatsquare3"
+      type : "fatsquare1"
     },
     envelope : {
-      attack : 0.001,
+      attack : 0.1,
       decay : .01,
       sustain : 1.1,
       release : 0.5
     }
   }).connect(phaser).connect(pingPong).toMaster()
-  fmSynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[10])*4), '12n');
+  fmSynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[10])), '12n');
 };
 
 function note12_7() {
   var pingPong = new Tone.PingPongDelay("12n", 0.2).toMaster();
   var phaser = new Tone.Phaser({
-    "frequency" : 10,
-    "octaves" : 5,
-    "baseFrequency" : 3000
+    "frequency" : 2,
+    "octaves" : 1,
+    "baseFrequency" : 300
   }).toMaster();
   var fmSynth = new Tone.FMSynth({
     oscillator : {
-      type : "fatsquare3"
+      type : "fatsquare1"
     },
     envelope : {
-      attack : 0.001,
+      attack : 0.1,
       decay : .01,
       sustain : 1.1,
       release : 0.5
     }
   }).connect(phaser).connect(pingPong).toMaster()
-  fmSynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[11])*4), '12n');
+  fmSynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[11])), '12n');
 };
 
 
 function note13_7() {
   var pingPong = new Tone.PingPongDelay("12n", 0.2).toMaster();
   var phaser = new Tone.Phaser({
-    "frequency" : 10,
-    "octaves" : 5,
-    "baseFrequency" : 3000
+    "frequency" : 2,
+    "octaves" : 1,
+    "baseFrequency" : 300
   }).toMaster();
   var fmSynth = new Tone.FMSynth({
     oscillator : {
-      type : "fatsquare3"
+      type : "fatsquare1"
     },
     envelope : {
-      attack : 0.001,
+      attack : 0.1,
       decay : .01,
       sustain : 1.1,
       release : 0.5
     }
   }).connect(phaser).connect(pingPong).toMaster()
-  fmSynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[12])*4), '12n');
+  fmSynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[12])), '12n');
+};
+
+
+
+
+/////////////aqua synth////
+
+
+
+
+function note1_8() {
+  var roundsynth = new Tone.Synth({
+    oscillator : {
+      type : "fatsquare1"
+    },
+    envelope : {
+      attack : .09,
+      decay : .4,
+      sustain : 0.001,
+      release : .2
+    }
+  }).toMaster()
+
+  roundsynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[12])/2), '3n');
+  console.log('hit');
+};
+
+function note2_8() {
+  var roundsynth = new Tone.Synth({
+    oscillator : {
+      type : "fatsquare1"
+    },
+    envelope : {
+      attack : .09,
+      decay : .4,
+      sustain : 0.001,
+      release : .2
+    }
+  }).toMaster()
+
+  roundsynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[11])/2), '3n');
+};
+function note3_8() {
+  var roundsynth = new Tone.Synth({
+    oscillator : {
+      type : "fatsquare1"
+    },
+    envelope : {
+      attack : .09,
+      decay : .4,
+      sustain : 0.001,
+      release : .2
+    }
+  }).toMaster()
+
+  roundsynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[10])/2), '3n');
+};
+function note4_8() {
+  var roundsynth = new Tone.Synth({
+    oscillator : {
+      type : "fatsquare1"
+    },
+    envelope : {
+      attack : .09,
+      decay : .4,
+      sustain : 0.001,
+      release : .2
+    }
+  }).toMaster()
+
+  roundsynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[9])/2), '3n');
+};
+function note5_8() {
+  var roundsynth = new Tone.Synth({
+    oscillator : {
+      type : "fatsquare1"
+    },
+    envelope : {
+      attack : .09,
+      decay : .4,
+      sustain : 0.001,
+      release : .2
+    }
+  }).toMaster()
+
+  roundsynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[8])/2), '3n');
+};
+function note6_8() {
+  var roundsynth = new Tone.Synth({
+    oscillator : {
+      type : "fatsquare1"
+    },
+    envelope : {
+      attack : .09,
+      decay : .4,
+      sustain : 0.001,
+      release : .2
+    }
+  }).toMaster()
+
+  roundsynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[7])/2), '3n');
+};
+function note7_8() {
+  var roundsynth = new Tone.Synth({
+    oscillator : {
+      type : "fatsquare1"
+    },
+    envelope : {
+      attack : .09,
+      decay : .4,
+      sustain : 0.001,
+      release : .2
+    }
+  }).toMaster()
+
+  roundsynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[6])/2), '3n');
+};
+function note8_8() {
+  var roundsynth = new Tone.Synth({
+    oscillator : {
+      type : "fatsquare1"
+    },
+    envelope : {
+      attack : .09,
+      decay : .4,
+      sustain : 0.001,
+      release : .2
+    }
+  }).toMaster()
+
+  roundsynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[5])/2), '3n');
+};
+function note9_8() {
+  var roundsynth = new Tone.Synth({
+    oscillator : {
+      type : "fatsquare1"
+    },
+    envelope : {
+      attack : .09,
+      decay : .4,
+      sustain : 0.001,
+      release : .2
+    }
+  }).toMaster()
+
+  roundsynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[4])/2), '3n');
+};
+function note10_8() {
+  var roundsynth = new Tone.Synth({
+    oscillator : {
+      type : "fatsquare1"
+    },
+    envelope : {
+      attack : .09,
+      decay : .4,
+      sustain : 0.001,
+      release : .2
+    }
+  }).toMaster()
+
+  roundsynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[3])/2), '3n');
+};
+function note11_8() {
+  var roundsynth = new Tone.Synth({
+    oscillator : {
+      type : "fatsquare1"
+    },
+    envelope : {
+      attack : .09,
+      decay : .4,
+      sustain : 0.001,
+      release : .2
+    }
+  }).toMaster()
+
+  roundsynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[2])/2), '3n');
+};
+function note12_8() {
+  var roundsynth = new Tone.Synth({
+    oscillator : {
+      type : "fatsquare1"
+    },
+    envelope : {
+      attack : .09,
+      decay : .4,
+      sustain : 0.001,
+      release : .2
+    }
+  }).toMaster()
+
+  roundsynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[1])/2), '3n');
+};
+
+function note13_8() {
+  var roundsynth = new Tone.Synth({
+    oscillator : {
+      type : "fatsquare1"
+    },
+    envelope : {
+      attack : .09,
+      decay : .4,
+      sustain : 0.001,
+      release : .2
+    }
+  }).toMaster()
+
+  roundsynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[0])/2), '3n');
+};
+
+
+
+
+
+//////////////////////////////////
+//*********Dark Green SYNTH*********//
+//////////////////////////////////
+
+
+
+
+function note1_9() {
+  var duoSynth = new Tone.DuoSynth({
+    oscillator : {
+      type : "fatsquare3"
+    },
+    envelope : {
+      attack : 0.3,
+      decay : .1,
+      sustain : 0.3,
+      release : 0.4
+    }
+  }).toMaster()
+
+  duoSynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[0])/5), '7n');
+};
+function note2_9() {
+  var duoSynth = new Tone.DuoSynth({
+    oscillator : {
+      type : "fatsquare3"
+    },
+    envelope : {
+      attack : 0.03,
+      decay : .1,
+      sustain : 0.3,
+      release : 0.4
+    }
+  }).toMaster()
+
+  duoSynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[1])/5), '7n');
+};
+function note3_9() {
+  var duoSynth = new Tone.DuoSynth({
+    oscillator : {
+      type : "fatsquare3"
+    },
+    envelope : {
+      attack : 0.03,
+      decay : .1,
+      sustain : 0.3,
+      release : 0.4
+    }
+  }).toMaster()
+
+  duoSynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[2])/5), '7n');
+};
+function note4_9() {
+  var duoSynth = new Tone.DuoSynth({
+    oscillator : {
+      type : "fatsquare3"
+    },
+    envelope : {
+      attack : 0.03,
+      decay : .1,
+      sustain : 0.3,
+      release : 0.4
+    }
+  }).toMaster()
+
+  duoSynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[3])/5), '7n');
+};
+function note5_9() {
+  var duoSynth = new Tone.DuoSynth({
+    oscillator : {
+      type : "fatsquare3"
+    },
+    envelope : {
+      attack : 0.03,
+      decay : .1,
+      sustain : 0.3,
+      release : 0.4
+    }
+  }).toMaster()
+
+  duoSynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[4])/5), '7n');
+};
+function note6_9() {
+  var duoSynth = new Tone.DuoSynth({
+    oscillator : {
+      type : "fatsquare3"
+    },
+    envelope : {
+      attack : 0.03,
+      decay : .1,
+      sustain : 0.3,
+      release : 0.4
+    }
+  }).toMaster()
+
+  duoSynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[5])/5), '7n');
+};
+function note7_9() {
+  var duoSynth = new Tone.DuoSynth({
+    oscillator : {
+      type : "fatsquare3"
+    },
+    envelope : {
+      attack : 0.03,
+      decay : .1,
+      sustain : 0.3,
+      release : 0.4
+    }
+  }).toMaster()
+
+  duoSynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[6])/5), '7n');
+};
+function note8_9() {
+  var duoSynth = new Tone.DuoSynth({
+    oscillator : {
+      type : "fatsquare3"
+    },
+    envelope : {
+      attack : 0.03,
+      decay : .1,
+      sustain : 0.3,
+      release : 0.4
+    }
+  }).toMaster()
+
+  duoSynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[7])/5), '7n');
+};
+function note9_9() {
+  var duoSynth = new Tone.DuoSynth({
+    oscillator : {
+      type : "fatsquare3"
+    },
+    envelope : {
+      attack : 0.03,
+      decay : .1,
+      sustain : 0.3,
+      release : 0.4
+    }
+  }).toMaster()
+
+  duoSynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[8])/5), '7n');
+};
+
+function note10_9() {
+  var duoSynth = new Tone.DuoSynth({
+    oscillator : {
+      type : "fatsquare3"
+    },
+    envelope : {
+      attack : 0.03,
+      decay : .1,
+      sustain : 0.3,
+      release : 0.4
+    }
+  }).toMaster()
+
+  duoSynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[9])/5), '7n');
+};
+
+function note11_9() {
+  var duoSynth = new Tone.DuoSynth({
+    oscillator : {
+      type : "fatsquare3"
+    },
+    envelope : {
+      attack : 0.03,
+      decay : .1,
+      sustain : 0.3,
+      release : 0.4
+    }
+  }).toMaster()
+
+  duoSynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[10])/5), '7n');
+};
+function note12_9() {
+  var duoSynth = new Tone.DuoSynth({
+    oscillator : {
+      type : "fatsquare3"
+    },
+    envelope : {
+      attack : 0.03,
+      decay : .1,
+      sustain : 0.3,
+      release : 0.4
+    }
+  }).toMaster()
+
+  duoSynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[11])/5), '7n');
+};
+function note13_9() {
+  var duoSynth = new Tone.DuoSynth({
+    oscillator : {
+      type : "fatsquare3"
+    },
+    envelope : {
+      attack : 0.03,
+      decay : .1,
+      sustain : 0.3,
+      release : 0.4
+    }
+  }).toMaster()
+
+  duoSynth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[12])/5), '7n');
+};
+
+
+
+
+
+
+///////////////////////////////
+//*********Pink SYNTH*********//
+///////////////////////////////
+
+
+
+function note1_10() {
+  var synth = new Tone.Synth({
+    oscillator : {
+      type : "fatsquare100"
+    },
+    envelope : {
+      attack : 0.01,
+      decay : 0.5,
+      sustain : 0.1,
+      release : 0.8
+    }
+  }).toMaster()
+
+  synth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[12])/4), '9n');
+};
+
+function note2_10() {
+  var synth = new Tone.Synth({
+    oscillator : {
+      type : "fatsquare100"
+    },
+    envelope : {
+      attack : 0.01,
+      decay : 0.5,
+      sustain : 0.1,
+      release : 0.8
+    }
+  }).toMaster()
+
+  synth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[11])/4), '9n');
+};
+function note3_10() {
+  var synth = new Tone.Synth({
+    oscillator : {
+      type : "fatsquare100"
+    },
+    envelope : {
+      attack : 0.01,
+      decay : 0.5,
+      sustain : 0.1,
+      release : 0.8
+    }
+  }).toMaster()
+
+  synth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[10])/4), '9n');
+};
+function note4_10() {
+  var synth = new Tone.Synth({
+    oscillator : {
+      type : "fatsquare100"
+    },
+    envelope : {
+      attack : 0.01,
+      decay : 0.5,
+      sustain : 0.1,
+      release : 0.8
+    }
+  }).toMaster()
+
+  synth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[9])/4), '9n');
+};
+function note5_10() {
+  var synth = new Tone.Synth({
+    oscillator : {
+      type : "fatsquare100"
+    },
+    envelope : {
+      attack : 0.01,
+      decay : 0.5,
+      sustain : 0.1,
+      release : 0.8
+    }
+  }).toMaster()
+
+  synth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[8])/4), '9n');
+};
+function note6_10() {
+  var synth = new Tone.Synth({
+    oscillator : {
+      type : "fatsquare100"
+    },
+    envelope : {
+      attack : 0.01,
+      decay : 0.5,
+      sustain : 0.1,
+      release : 0.8
+    }
+  }).toMaster()
+
+  synth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[7])/4), '9n');
+};
+function note7_10() {
+  var synth = new Tone.Synth({
+    oscillator : {
+      type : "fatsquare100"
+    },
+    envelope : {
+      attack : 0.01,
+      decay : 0.5,
+      sustain : 0.1,
+      release : 0.8
+    }
+  }).toMaster()
+
+  synth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[6])/4), '9n');
+};
+function note8_10() {
+  var synth = new Tone.Synth({
+    oscillator : {
+      type : "fatsquare100"
+    },
+    envelope : {
+      attack : 0.01,
+      decay : 0.5,
+      sustain : 0.1,
+      release : 0.8
+    }
+  }).toMaster()
+
+  synth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[5])/4), '9n');
+};
+function note9_10() {
+  var synth = new Tone.Synth({
+    oscillator : {
+      type : "fatsquare100"
+    },
+    envelope : {
+      attack : 0.01,
+      decay : 0.5,
+      sustain : 0.1,
+      release : 0.8
+    }
+  }).toMaster()
+
+  synth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[4])/4), '9n');
+};
+function note10_10() {
+  var synth = new Tone.Synth({
+    oscillator : {
+      type : "fatsquare100"
+    },
+    envelope : {
+      attack : 0.01,
+      decay : 0.5,
+      sustain : 0.1,
+      release : 0.8
+    }
+  }).toMaster()
+
+  synth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[3])/4), '9n');
+};
+function note11_10() {
+  var synth = new Tone.Synth({
+    oscillator : {
+      type : "fatsquare100"
+    },
+    envelope : {
+      attack : 0.01,
+      decay : 0.5,
+      sustain : 0.1,
+      release : 0.8
+    }
+  }).toMaster()
+
+  synth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[2])/4), '9n');
+
+};
+function note12_10() {
+  var synth = new Tone.Synth({
+    oscillator : {
+      type : "fatsquare100"
+    },
+    envelope : {
+      attack : 0.01,
+      decay : 0.5,
+      sustain : 0.1,
+      release : 0.8
+    }
+  }).toMaster()
+
+  synth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[1])/4), '9n');
+
+};
+function note13_10() {
+  var synth = new Tone.Synth({
+    oscillator : {
+      type : "fatsquare100"
+    },
+    envelope : {
+      attack : 0.01,
+      decay : 0.5,
+      sustain : 0.1,
+      release : 0.8
+    }
+  }).toMaster()
+
+  synth.triggerAttackRelease((440 * Tone.intervalToFrequencyRatio(LydianScalesA[0])/4), '9n');
 };

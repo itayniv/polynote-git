@@ -120,7 +120,7 @@ sockets.on('connection', function(socket){
     //console.log('playerAmount', playerAmount);
 
     sockets.emit('usercount', sockets.engine.clientsCount);
-    console.log('User num: ', sockets.engine.clientsCount);
+    //console.log('User num: ', sockets.engine.clientsCount);
   });
 });
 
